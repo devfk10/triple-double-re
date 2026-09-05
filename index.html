@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triple Double RE — Institutional Real Estate Investment & Operations</title>
+    
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        offwhite: '#F5F3EE',
+                        navy: '#101C2C',
+                        charcoal: '#25282B',
+                        stoneMuted: '#A7A39A',
+                        bronze: '#A68B63',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom-container img {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .img-zoom-container:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-offwhite text-charcoal font-sans antialiased selection:bg-bronze selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-md text-offwhite border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+            <!-- Logo / Wordmark -->
+            <a href="#" class="font-serif text-2xl lg:text-3xl tracking-wide font-medium text-offwhite">
+                Triple Double <span class="text-bronze italic">RE</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-10 text-sm tracking-widest uppercase font-light text-stoneMuted">
+                <a href="#portfolio" class="hover:text-offwhite transition-colors duration-200">Portfolio</a>
+                <a href="#expertise" class="hover:text-offwhite transition-colors duration-200">Expertise</a>
+                <a href="#about" class="hover:text-offwhite transition-colors duration-200">About</a>
+                <a href="#contact" class="hover:text-offwhite transition-colors duration-200">Contact</a>
+            </nav>
+
+            <!-- Investor Relations / CTA -->
+            <div class="hidden lg:block">
+                <a href="#contact" class="border border-bronze text-bronze hover:bg-bronze hover:text-navy px-6 py-3 text-xs uppercase tracking-widest font-medium transition-all duration-300">
+                    Investor Relations
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-offwhite focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy border-b border-white/10 px-6 py-6 space-y-4">
+            <a href="#portfolio" class="block text-sm uppercase tracking-widest text-stoneMuted hover:text-offwhite">Portfolio</a>
+            <a href="#expertise" class="block text-sm uppercase tracking-widest text-stoneMuted hover:text-offwhite">Expertise</a>
+            <a href="#about" class="block text-sm uppercase tracking-widest text-stoneMuted hover:text-offwhite">About</a>
+            <a href="#contact" class="block text-sm uppercase tracking-widest text-stoneMuted hover:text-offwhite">Contact</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative h-screen min-h-[700px] flex items-center justify-center text-offwhite bg-navy overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Modern Architecture" class="w-full h-full object-cover object-center scale-105 opacity-55">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-navy/20"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center mt-12">
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal leading-[1.15] tracking-tight mb-8">
+                Investing in Places <br class="hidden sm:inline"><span class="italic text-bronze">That Endure.</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-stoneMuted text-lg sm:text-xl font-light leading-relaxed mb-12">
+                Triple Double RE invests in, operates, and manages real estate with a long-term view toward lasting value.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                <a href="#portfolio" class="w-full sm:w-auto bg-bronze text-navy hover:bg-offwhite px-8 py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-300 text-center">
+                    Explore Our Portfolio
+                </a>
+                <a href="#expertise" class="text-offwhite hover:text-bronze text-xs uppercase tracking-widest font-medium underline underline-offset-8 transition-colors duration-200">
+                    Our Expertise &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRACK RECORD / STATS -->
+    <section class="bg-navy text-offwhite py-20 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-2 md:grid-cols-4 gap-12 text-center md:text-left">
+            <div>
+                <div class="font-serif text-4xl lg:text-5xl font-light text-bronze mb-2">$1B+</div>
+                <div class="text-stoneMuted text-xs uppercase tracking-widest font-light">Assets Under Management</div>
+            </div>
+            <div>
+                <div class="font-serif text-4xl lg:text-5xl font-light text-bronze mb-2">25+</div>
+                <div class="text-stoneMuted text-xs uppercase tracking-widest font-light">Years Collective Expertise</div>
+            </div>
+            <div>
+                <div class="font-serif text-4xl lg:text-5xl font-light text-bronze mb-2">48+</div>
+                <div class="text-stoneMuted text-xs uppercase tracking-widest font-light">Properties Managed</div>
+            </div>
+            <div>
+                <div class="font-serif text-4xl lg:text-5xl font-light text-bronze mb-2">14+</div>
+                <div class="text-stoneMuted text-xs uppercase tracking-widest font-light">Core Markets</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="py-28 lg:py-36 max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-20">
+            <div>
+                <span class="text-bronze text-xs uppercase tracking-widest font-medium block mb-3">Featured Portfolio</span>
+                <h2 class="font-serif text-3xl sm:text-5xl text-navy font-normal tracking-tight">Built Around Long-Term Value.</h2>
+            </div>
+            <p class="text-stoneMuted max-w-md mt-6 md:mt-0 text-base sm:text-lg leading-relaxed font-light">
+                Our portfolio reflects a disciplined approach to acquiring, operating, and growing real estate across evolving markets.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+            <!-- Project 1 -->
+            <div class="lg:col-span-8 group">
+                <div class="img-zoom-container bg-charcoal aspect-[16/10] mb-6">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1935&auto=format&fit=crop" alt="The Grandview Tower" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center justify-between">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-bronze block mb-1">Commercial Office</span>
+                        <h3 class="font-serif text-2xl text-navy">The Grandview Tower</h3>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-stoneMuted text-sm block mb-1">Manhattan, NY</span>
+                        <a href="#" class="text-xs uppercase tracking-widest font-medium text-navy group-hover:text-bronze transition-colors">View Property &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="lg:col-span-4 lg:mt-24 group">
+                <div class="img-zoom-container bg-charcoal aspect-[4/5] mb-6">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1770&auto=format&fit=crop" alt="Aurelia Residences" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-bronze block mb-1">Luxury Multifamily</span>
+                    <h3 class="font-serif text-2xl text-navy mb-1">Aurelia Residences</h3>
+                    <div class="flex items-center justify-between">
+                        <span class="text-stoneMuted text-sm">Chicago, IL</span>
+                        <a href="#" class="text-xs uppercase tracking-widest font-medium text-navy group-hover:text-bronze transition-colors">View Property &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="lg:col-span-12 group mt-8">
+                <div class="img-zoom-container bg-charcoal aspect-[21/9] mb-6">
+                    <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=1974&auto=format&fit=crop" alt="Meridian Financial Center" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-bronze block mb-1">Mixed-Use Development</span>
+                        <h3 class="font-serif text-2xl text-navy">Meridian Financial Center</h3>
+                    </div>
+                    <div class="flex items-center space-x-8 mt-2 sm:mt-0">
+                        <span class="text-stoneMuted text-sm">Dallas, TX</span>
+                        <a href="#" class="text-xs uppercase tracking-widest font-medium text-navy group-hover:text-bronze transition-colors">View Property &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTISE SECTION -->
+    <section id="expertise" class="bg-navy text-offwhite py-28 lg:py-36">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl mb-20">
+                <span class="text-bronze text-xs uppercase tracking-widest font-medium block mb-3">Core Capabilities</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-normal tracking-tight">Experience Across Every Stage of Real Estate.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="border-t border-white/20 pt-8">
+                    <span class="text-bronze text-xs font-mono block mb-4">01 / CAPABILITY</span>
+                    <h3 class="font-serif text-2xl mb-4">Investment</h3>
+                    <p class="text-stoneMuted text-base font-light leading-relaxed">
+                        Disciplined capital allocation focused on high-growth urban corridors and resilient asset classes.
+                    </p>
+                </div>
+                <div class="border-t border-white/20 pt-8">
+                    <span class="text-bronze text-xs font-mono block mb-4">02 / CAPABILITY</span>
+                    <h3 class="font-serif text-2xl mb-4">Operations</h3>
+                    <p class="text-stoneMuted text-base font-light leading-relaxed">
+                        Maximizing operational efficiencies and tenant retention through hands-on property management.
+                    </p>
+                </div>
+                <div class="border-t border-white/20 pt-8">
+                    <span class="text-bronze text-xs font-mono block mb-4">03 / CAPABILITY</span>
+                    <h3 class="font-serif text-2xl mb-4">Asset Management</h3>
+                    <p class="text-stoneMuted text-base font-light leading-relaxed">
+                        Strategic oversight designed to protect capital, optimize cash flow, and enhance portfolio value.
+                    </p>
+                </div>
+                <div class="border-t border-white/20 pt-8">
+                    <span class="text-bronze text-xs font-mono block mb-4">04 / CAPABILITY</span>
+                    <h3 class="font-serif text-2xl mb-4">Development</h3>
+                    <p class="text-stoneMuted text-base font-light leading-relaxed">
+                        Transforming underutilized spaces into iconic, sustainable, and functional architectural landmarks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVESTMENT PHILOSOPHY / STATEMENT -->
+    <section class="py-32 bg-navy text-offwhite border-t border-white/10 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <span class="text-bronze text-xs uppercase tracking-widest font-medium block mb-6">Our Philosophy</span>
+            <blockquote class="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal leading-tight italic text-offwhite">
+                “Real estate is more than an asset. It is a place, a business, and a long-term commitment.”
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- ABOUT / COMPANY SECTION -->
+    <section id="about" class="py-28 lg:py-36 max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+            <div class="lg:col-span-6 img-zoom-container bg-charcoal aspect-[4/5]">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" alt="Company Office Architecture" class="w-full h-full object-cover">
+            </div>
+            <div class="lg:col-span-6">
+                <span class="text-bronze text-xs uppercase tracking-widest font-medium block mb-3">Institutional Heritage</span>
+                <h2 class="font-serif text-3xl sm:text-5xl text-navy font-normal tracking-tight mb-8">
+                    Disciplined by Experience. <br><span class="italic text-bronze">Driven by Opportunity.</span>
+                </h2>
+                <p class="text-stoneMuted text-lg sm:text-xl font-light leading-relaxed mb-8">
+                    Triple Double RE combines investment discipline, operational expertise, and a long-term perspective to create enduring value for partners, investors, and communities.
+                </p>
+                <a href="#contact" class="inline-block border border-navy text-navy hover:bg-navy hover:text-offwhite px-8 py-4 text-xs uppercase tracking-widest font-medium transition-all duration-300">
+                    About Triple Double RE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section id="contact" class="relative py-32 bg-navy text-offwhite overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop" alt="Modern Interior" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-navy/80"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-4xl sm:text-6xl font-normal tracking-tight mb-6">Let’s Build What Comes Next.</h2>
+            <p class="text-stoneMuted text-lg font-light max-w-xl mx-auto mb-10">
+                Connect with Triple Double RE to explore investment opportunities, partnerships, and our growing portfolio.
+            </p>
+            <a href="mailto:contact@tripledoublere.com" class="inline-block bg-bronze text-navy hover:bg-offwhite px-10 py-5 text-xs uppercase tracking-widest font-semibold transition-all duration-300">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy text-offwhite border-t border-white/10 py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
+            <div class="font-serif text-2xl tracking-wide">
+                Triple Double <span class="text-bronze italic">RE</span>
+            </div>
+            <div class="flex flex-wrap justify-center space-x-8 text-xs uppercase tracking-widest text-stoneMuted font-light">
+                <a href="#portfolio" class="hover:text-offwhite transition-colors">Portfolio</a>
+                <a href="#expertise" class="hover:text-offwhite transition-colors">Expertise</a>
+                <a href="#about" class="hover:text-offwhite transition-colors">About</a>
+                <a href="#contact" class="hover:text-offwhite transition-colors">Contact</a>
+            </div>
+            <div class="text-stoneMuted text-xs font-light">
+                &copy; 2026 Triple Double RE. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
